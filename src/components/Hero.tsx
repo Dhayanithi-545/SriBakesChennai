@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const categories = [
     { id: "baby-kids", name: "Baby & Kids Cakes", image: "/baby-kids/IMG-20250705-WA0072.jpg" },
-    { id: "love-couple", name: "Love & Couple Cakes", image: "/love-couple/IMG-20250827-WA0037.jpeg" },
+    { id: "love-couple", name: "Love & Couple Cakes", image: "/love-couple/IMG_20251108_145245.jpg" },
     { id: "mini-cute", name: "Mini & Cute Cakes", image: "/mini-cute/IMG-20250511-WA0021.jpg" },
     { id: "brownies", name: "Signature Brownies", image: "/brownies/IMG-20250705-WA0068.jpg" },
     { id: "standard", name: "Standard Cakes", image: "/standard/IMG-20231012-WA0002.jpg" },
@@ -20,7 +20,7 @@ const heroImages = [
     "/tier/IMG-20260224-WA0057.jpg",
     "/tier/IMG-20260219-WA0008(1).jpg",
     "/baby-kids/IMG-20250705-WA0072.jpg",
-    "/love-couple/IMG-20250827-WA0037.jpeg",
+    "/love-couple/IMG_20251108_145245.jpg",
     "/standard/IMG_20250622_103956.jpg",
     "/standard/IMG-20231012-WA0002.jpg",
 
