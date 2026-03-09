@@ -15,10 +15,15 @@ const categories = [
 
 const heroImages = [
     "/wedding/IMG_20260128_103159.jpg",
+    "/tier/Photo from SRILAKSHMI.jpg",
+    "/tier/IMG-20260226-WA0022.jpg",
+    "/tier/IMG-20260224-WA0057.jpg",
+    "/tier/IMG-20260219-WA0008(1).jpg",
     "/baby-kids/IMG-20250705-WA0072.jpg",
     "/love-couple/IMG-20250827-WA0037.jpeg",
     "/standard/IMG_20250622_103956.jpg",
     "/standard/IMG-20231012-WA0002.jpg",
+
 
     "/mini-cute/Scanned_20250820-0936-08.jpg",
     "/brownies/IMG_20250411_181144.jpg",
