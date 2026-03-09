@@ -14,7 +14,7 @@ const categories = [
 ];
 
 const heroImages = [
-    "/wedding/IMG_20260128_103159.jpg",
+    "/tier/IMG_20250622_142348.jpg",
     "/tier/Photo from SRILAKSHMI.jpg",
     "/tier/IMG-20260226-WA0022.jpg",
     "/tier/IMG-20260224-WA0057.jpg",
