@@ -41,12 +41,12 @@ yarn-error.log*
 next-env.d.ts
 
 # Media Storage
-/public/baby-kids
-/public/brownies
-/public/love-couple
-/public/mini-cute
-/public/standard
-/public/tier
-/public/wedding
-/public/fssai
-/public/logo.jpeg
+# /public/baby-kids
+# /public/brownies
+# /public/love-couple
+# /public/mini-cute
+# /public/standard
+# /public/tier
+# /public/wedding
+# /public/fssai
+# /public/logo.jpeg
