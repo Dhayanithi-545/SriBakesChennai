@@ -14,7 +14,7 @@ export default function WhyChooseUs() {
         },
         {
             title: "Premium Ingredients",
-            description: "We source only the finest butter, imported chocolates, and fresh fruits for rich flavor.",
+            description: "We use only the best ingredients to make our cakes.",
             icon: <Leaf className="w-8 h-8 text-[#e76f51]" />,
         },
         {
@@ -28,7 +28,8 @@ export default function WhyChooseUs() {
         <section className="py-24 bg-white border-b border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">Why Choose Sri Bakes?</h2>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-[#2c2420] tracking-tight mb-3">Why Choose Sri Bakes?</h2>
+                    <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

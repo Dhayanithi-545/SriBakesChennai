@@ -1,54 +1,55 @@
 import Link from "next/link";
-import { CheckCircle2 } from "lucide-react";
+
+const factors = [
+    { num: "01", title: "Weight", desc: "Minimum orders generally start at around 1 Kg. More weight means more cake!" },
+    { num: "02", title: "Flavour", desc: "Premium flavours cost slightly more than standard ones." },
+    { num: "03", title: "Complexity", desc: "Intricate details, custom fondant, and toppers alter pricing." },
+    { num: "04", title: "Delivery", desc: "Delivery charges apply based on your location in Chennai." },
+];
 
 export default function PricingInfo() {
     return (
-        <section className="py-24 bg-gray-50 border-b border-gray-100">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-white rounded-sm shadow-sm border border-gray-100">
-                    <div className="p-8 md:p-16 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">Pricing Information</h2>
+        <section className="py-20 bg-[#f5f0eb] border-b border-[#e5ddd5]">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                        <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-                            Every cake is a unique piece of edible art! Because all our cakes are entirely custom-made,
-                            we don't have a fixed price list.
-                        </p>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left max-w-5xl mx-auto mb-16">
-                            <div className="flex flex-col items-start p-6 bg-gray-50 border border-gray-100 rounded-sm">
-                                <CheckCircle2 className="w-8 h-8 text-[#e76f51] mb-4" />
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">Weight</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">Minimum cake orders generally start at around 1 Kg.</p>
-                            </div>
-                            <div className="flex flex-col items-start p-6 bg-gray-50 border border-gray-100 rounded-sm">
-                                <CheckCircle2 className="w-8 h-8 text-[#e76f51] mb-4" />
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">Flavour</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">Premium flavours cost slightly more than standard ones.</p>
-                            </div>
-                            <div className="flex flex-col items-start p-6 bg-gray-50 border border-gray-100 rounded-sm">
-                                <CheckCircle2 className="w-8 h-8 text-[#e76f51] mb-4" />
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">Complexity</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">Intricate details, custom fondant, and toppers alter pricing.</p>
-                            </div>
-                            <div className="flex flex-col items-start p-6 bg-gray-50 border border-gray-100 rounded-sm">
-                                <CheckCircle2 className="w-8 h-8 text-[#e76f51] mb-4" />
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">Delivery</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">Delivery charges apply based on your location in Chennai.</p>
-                            </div>
-                        </div>
-
-                        <div className="mt-8">
-                            <p className="text-gray-800 font-medium mb-6">
-                                Contact us to receive an exact quote for your dream cake.
-                            </p>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center justify-center bg-[#2c2420] hover:bg-black text-white px-8 py-3.5 rounded-sm text-sm font-semibold transition-colors shadow-sm"
-                            >
-                                Get a Quote
-                            </Link>
-                        </div>
+                {/* Header row */}
+                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12 pb-6 border-b-2 border-[#2c2420]">
+                    <div>
+                        <p className="text-xs font-bold tracking-widest uppercase text-[#e76f51] mb-2">Transparent Pricing</p>
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-[#2c2420] leading-tight">
+                            What Affects Your Cake Price?
+                        </h2>
                     </div>
+                    <p className="text-sm text-[#2c2420]/60 max-w-xs leading-relaxed">
+                        Every cake is entirely custom-made — no fixed price list. We tailor the cost to your order.
+                    </p>
+                </div>
+
+                {/* Factor cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+                    {factors.map((f) => (
+                        <div
+                            key={f.num}
+                            className="bg-white border border-[#e5ddd5] border-l-4 border-l-[#e76f51] p-6 rounded-sm"
+                        >
+                            <span className="block text-3xl font-black text-[#e76f51]/20 mb-3 leading-none">{f.num}</span>
+                            <h3 className="text-base font-bold text-[#2c2420] mb-2">{f.title}</h3>
+                            <p className="text-sm text-[#2c2420]/60 leading-relaxed">{f.desc}</p>
+                        </div>
+                    ))}
+                </div>
+
+                {/* CTA row */}
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-[#e5ddd5]">
+                    <p className="text-[#2c2420] font-medium text-sm">
+                        📞 Contact us to receive an exact quote for your dream cake.
+                    </p>
+                    <Link
+                        href="/contact"
+                        className="inline-flex items-center justify-center bg-[#e76f51] hover:bg-[#d05f42] text-white px-8 py-3.5 rounded-md text-sm font-semibold transition-colors duration-150"
+                    >
+                        Get a Quote
+                    </Link>
                 </div>
             </div>
         </section>

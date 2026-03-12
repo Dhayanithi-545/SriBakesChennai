@@ -37,9 +37,6 @@ export default function Footer() {
                     {/* Customer Support */}
                     <div>
                         <h4 className="text-lg font-semibold mb-6 text-white border-b border-white/10 pb-2 inline-block">Have a question?</h4>
-                        <p className="text-sm text-gray-300 mb-4">
-                            We're always here to lend a helping hand.
-                        </p>
                         <p className="text-sm text-gray-400 mb-6">
                             Customer Support Team hours are Monday-Saturday, 10 AM - 7 PM IST
                         </p>
@@ -87,15 +84,14 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Additional SEO/Location Links */}
+
+                {/* Top Searches — SEO */}
                 <div className="pt-8 mb-8 border-t border-white/10 text-xs text-gray-400 leading-relaxed">
-                    <p className="mb-4">
-                        <strong className="text-gray-300">Store Locations:</strong> Madipakkam, Velachery, Egattur, Navalur, Kottivakam
-                    </p>
                     <p>
                         <strong className="text-gray-300">Top Searches:</strong> Cake shop in Chennai, Cake shop near me, Order cake online, Cake shop in Madipakkam, Order custom cakes, Cake shop in Navalur, Cake shop in Chromepet, Order Wedding cakes, cakes for girls, Order cakes for boys, cakes for kids, cakes for anniversary, order birthday cake online, Order Pastry Online, Order cakes in Egattur
                     </p>
                 </div>
+
 
                 <div className="pt-6 border-t border-white/10 text-center text-xs text-gray-500">
                     <p>&copy; {new Date().getFullYear()} Sri Bakes. All rights reserved.</p>

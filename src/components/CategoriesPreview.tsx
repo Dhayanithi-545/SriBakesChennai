@@ -4,12 +4,12 @@ import Link from "next/link";
 
 const categories = [
     { id: "baby-kids", name: "Baby & Kids Cakes", image: "/baby-kids/IMG-20250705-WA0072.jpg" },
-    { id: "love-couple", name: "Love & Couple Cakes", image: "/love-couple/IMG-20250827-WA0037.jpeg" },
-    { id: "mini-cute", name: "Mini & Cute Cakes", image: "/mini-cute/IMG-20250511-WA0021.jpg" },
+    { id: "love-couple", name: "Love & Couple Cakes", image: "/love-couple/IMG_20250405_184257.jpg" },
+    { id: "mini-cute", name: "Mini & Cute Cakes", image: "/mini-cute/IMG_20250813_152104.jpg" },
     { id: "brownies", name: "Signature Brownies", image: "/brownies/IMG-20250705-WA0068.jpg" },
     { id: "standard", name: "Standard Cakes", image: "/standard/IMG-20231012-WA0002.jpg" },
     { id: "tier", name: "Tier Cakes", image: "/tier/IMG-20250427-WA0015.jpg" },
-    { id: "wedding", name: "Wedding Cakes", image: "/wedding/IMG_20260128_103159.jpg" },
+    { id: "wedding", name: "Wedding Cakes", image: "/wedding/IMG-20260214-WA0015.jpg" },
 ];
 
 export default function CategoriesPreview() {
@@ -17,7 +17,7 @@ export default function CategoriesPreview() {
         <section className="py-24 bg-white border-b border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">Our Creations</h2>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-[#2c2420] mb-4 tracking-tight">Our Creations</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-gray-600">
                         Explore our wide range of custom cakes designed for every special moment.
                     </p>

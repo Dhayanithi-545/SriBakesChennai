@@ -1,110 +1,141 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { X, Menu } from "lucide-react";
+
+const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/contact", label: "Contact" },
+];
 
 export default function Navbar() {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
+
+    // Add shadow when scrolled
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 8);
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
+    // Close menu on route change
+    useEffect(() => { setOpen(false); }, [pathname]);
 
     return (
-        <nav className="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-20 items-center">
-                    <div className="flex-shrink-0 flex items-center">
-                        <Link href="/" className="flex items-center gap-3">
-                            <div className="h-10 w-10 md:h-12 md:w-12 rounded-full overflow-hidden shrink-0">
-                                <img
-                                    src="/logo.jpeg"
-                                    alt="Sri Bakes Logo"
-                                    className="h-full w-full object-cover"
-                                />
+        <>
+            <nav
+                className={`sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md transition-shadow duration-300
+                    ${scrolled ? "shadow-md border-b-0" : "border-b border-gray-100"}`}
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex items-center justify-between h-16 md:h-20">
+
+                        {/* Logo */}
+                        <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
+                            <div className="h-9 w-9 md:h-11 md:w-11 rounded-full overflow-hidden ring-2 ring-primary/20">
+                                <img src="/logo.jpeg" alt="Sri Bakes Logo" className="h-full w-full object-cover" />
                             </div>
-                            <span className="text-3xl tracking-tight text-[#c65f47]" style={{ fontFamily: 'var(--font-logo)' }}>Sri Bakes</span>
+                            <span
+                                className="text-2xl md:text-3xl font-black tracking-tight text-[#c65f47]"
+                                style={{ fontFamily: "var(--font-logo)" }}
+                            >
+                                Sri Bakes
+                            </span>
                         </Link>
-                    </div>
 
-                    <div className="hidden sm:flex sm:space-x-8 items-center">
-                        <Link
-                            href="/"
-                            className="text-gray-700 hover:text-[#c65f47] px-3 py-2 text-sm font-medium transition-colors"
-                        >
-                            Home
-                        </Link>
-                        <Link
-                            href="/gallery"
-                            className="text-gray-700 hover:text-[#c65f47] px-3 py-2 text-sm font-medium transition-colors"
-                        >
-                            Gallery
-                        </Link>
-                        <Link
-                            href="/contact"
-                            className="text-gray-700 hover:text-[#c65f47] px-3 py-2 text-sm font-medium transition-colors"
-                        >
-                            Contact
-                        </Link>
-                        <Link
-                            href="/contact"
-                            className="bg-[#2c2420] hover:bg-black text-white px-6 py-2.5 rounded-sm text-sm font-medium transition-colors"
-                        >
-                            Order Now
-                        </Link>
-                    </div>
+                        {/* Desktop nav links */}
+                        <div className="hidden md:flex items-center gap-1">
+                            {navLinks.map((link) => {
+                                const isActive = pathname === link.href;
+                                return (
+                                    <Link
+                                        key={link.href}
+                                        href={link.href}
+                                        className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors
+                                            ${isActive
+                                                ? "text-primary bg-primary/8"
+                                                : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                                            }`}
+                                    >
+                                        {link.label}
+                                        {isActive && (
+                                            <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-primary rounded-full" />
+                                        )}
+                                    </Link>
+                                );
+                            })}
 
-                    {/* Mobile menu button */}
-                    <div className="flex items-center sm:hidden">
-                        <Link
-                            href="/contact"
-                            className="bg-[#2c2420] text-white px-4 py-2 rounded-sm text-sm font-medium mr-4"
-                        >
-                            Order
-                        </Link>
-                        <button
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            type="button"
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-black focus:outline-none"
-                            aria-controls="mobile-menu"
-                            aria-expanded={isMobileMenuOpen}
-                        >
-                            <span className="sr-only">Open main menu</span>
-                            {!isMobileMenuOpen ? (
-                                <Menu className="block h-6 w-6" aria-hidden="true" />
-                            ) : (
-                                <X className="block h-6 w-6" aria-hidden="true" />
-                            )}
-                        </button>
+                            {/* CTA */}
+                            <Link
+                                href="/contact"
+                                className="ml-3 inline-flex items-center gap-2 bg-[#e76f51] hover:bg-[#d05f42] text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-colors duration-150"
+                            >
+                                Order Now
+                            </Link>
+                        </div>
+
+                        {/* Mobile: Order pill + hamburger */}
+                        <div className="flex md:hidden items-center gap-2">
+                            <Link
+                                href="/contact"
+                                className="bg-[#e76f51] hover:bg-[#d05f42] text-white px-4 py-2 rounded-md text-sm font-semibold transition-colors duration-150"
+                            >
+                                Order
+                            </Link>
+                            <button
+                                onClick={() => setOpen(!open)}
+                                aria-label="Toggle menu"
+                                aria-expanded={open}
+                                className="p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+                            >
+                                {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Mobile menu */}
-            {isMobileMenuOpen && (
-                <div className="sm:hidden bg-white border-b border-gray-100" id="mobile-menu">
-                    <div className="px-2 pt-2 pb-3 space-y-1">
-                        <Link
-                            href="/"
-                            className="text-gray-700 hover:bg-gray-50 hover:text-[#c65f47] block px-3 py-3 rounded-md text-base font-medium"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            Home
-                        </Link>
-                        <Link
-                            href="/gallery"
-                            className="text-gray-700 hover:bg-gray-50 hover:text-[#c65f47] block px-3 py-3 rounded-md text-base font-medium"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            Gallery
-                        </Link>
-                        <Link
-                            href="/contact"
-                            className="text-gray-700 hover:bg-gray-50 hover:text-[#c65f47] block px-3 py-3 rounded-md text-base font-medium"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            Contact
-                        </Link>
+                {/* Mobile slide-down menu */}
+                <div
+                    className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out
+                        ${open ? "max-h-64 border-t border-gray-100" : "max-h-0"}`}
+                >
+                    <div className="bg-white px-4 py-3 space-y-1">
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href;
+                            return (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    onClick={() => setOpen(false)}
+                                    className={`flex items-center px-4 py-3.5 rounded-xl text-base font-medium transition-colors
+                                        ${isActive
+                                            ? "bg-primary/8 text-primary font-semibold"
+                                            : "text-gray-700 hover:bg-gray-50 hover:text-primary"
+                                        }`}
+                                >
+                                    {isActive && (
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3 flex-shrink-0" />
+                                    )}
+                                    {link.label}
+                                </Link>
+                            );
+                        })}
                     </div>
                 </div>
+            </nav>
+
+            {/* Mobile backdrop */}
+            {open && (
+                <div
+                    className="fixed inset-0 z-40 bg-black/20 md:hidden"
+                    onClick={() => setOpen(false)}
+                />
             )}
-        </nav>
+        </>
     );
 }

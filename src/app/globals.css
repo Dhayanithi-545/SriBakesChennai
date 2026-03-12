@@ -159,37 +159,7 @@ h2 {
   background: var(--color-primary);
 }
 
-/* Marquee / Slideshow Carousel */
-.marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  position: relative;
-  /* subtle fade out at the edges */
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-.marquee-content {
-  display: inline-flex;
-  gap: 1.5rem;
-  animation: marquee 35s linear infinite;
-  padding: 1rem 0;
-}
-
-.marquee-content:hover {
-  animation-play-state: paused;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(calc(-50% - 0.75rem));
-  }
-}
+/* Category carousel is now JS-driven (requestAnimationFrame). CSS animation removed. */
 
 @media (prefers-reduced-motion: reduce) {
 
