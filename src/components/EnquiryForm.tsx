@@ -77,6 +77,39 @@ export default function EnquiryForm() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
+        // ── 1. Log to Google Sheets with better error handling ────────
+        const webhookUrl = process.env.NEXT_PUBLIC_SHEETS_WEBHOOK || "https://script.google.com/macros/s/AKfycbw1oRuYVHrUnaOxh8buw69CoxibmzN8xieM4Y6I2T4SPxe2r1fJ0lowVOns6vxb461F/exec";
+        
+        const sheetData = {
+            name: formData.name,
+            phone: formData.phone,
+            eventDate: formData.eventDate,
+        };
+
+        console.log("Sending to sheets:", sheetData);
+        console.log("Webhook URL:", webhookUrl);
+
+        // Use URL-encoded format to avoid CORS issues
+        const urlEncodedData = new URLSearchParams({
+            'data': JSON.stringify(sheetData)
+        });
+
+        fetch(webhookUrl, {
+            method: "POST",
+            headers: { 
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: urlEncodedData,
+            mode: "no-cors"
+        })
+        .then(response => {
+            console.log("Sheets response received (no-cors mode)");
+        })
+        .catch(error => {
+            console.error("Sheets error:", error);
+        });
+
+        // ── 2. Build WhatsApp message ─────────────────────────────────
         let locationLine = "";
         if (locationState.type === "gps") {
             locationLine = `%0A*Location (GPS):* ${encodeURIComponent(locationState.mapsUrl)}`;
@@ -106,7 +139,7 @@ export default function EnquiryForm() {
     return (
         <>
             <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold text-[#2c2420] mb-1.5 tracking-tight">Custom Cake Enquiry</h2>
+                <h2 className="text-2xl font-bold text-[#2c2420] mb-1.5 tracking-tight"> Custom Cake Enquiry</h2>
                 <p className="text-gray-500 text-sm">
                     Fill out the details and we&apos;ll send you a personalized quote via WhatsApp.
                 </p>
