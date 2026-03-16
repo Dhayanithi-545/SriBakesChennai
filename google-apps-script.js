@@ -52,10 +52,11 @@ function doPost(e) {
                 "Customer Name",
                 "Mobile Number",
                 "Event Date",
+                "Delivery Location",
             ]);
 
             // Bold header row
-            sheet.getRange(1, 1, 1, 4).setFontWeight("bold");
+            sheet.getRange(1, 1, 1, 5).setFontWeight("bold");
         }
 
         // Append customer row
@@ -64,6 +65,7 @@ function doPost(e) {
             data.name || "",
             data.phone || "",
             data.eventDate || "",
+            data.deliveryLocation || "",
         ];
         
         Logger.log("Appending row: " + JSON.stringify(rowData));

@@ -80,10 +80,19 @@ export default function EnquiryForm() {
         // ── 1. Log to Google Sheets with better error handling ────────
         const webhookUrl = process.env.NEXT_PUBLIC_SHEETS_WEBHOOK || "https://script.google.com/macros/s/AKfycbw1oRuYVHrUnaOxh8buw69CoxibmzN8xieM4Y6I2T4SPxe2r1fJ0lowVOns6vxb461F/exec";
         
+        // Prepare location data for sheets
+        let deliveryLocation = "";
+        if (locationState.type === "gps") {
+            deliveryLocation = locationState.mapsUrl;
+        } else if (locationState.type === "manual" && formData.manualLocation.trim()) {
+            deliveryLocation = formData.manualLocation.trim();
+        }
+        
         const sheetData = {
             name: formData.name,
             phone: formData.phone,
             eventDate: formData.eventDate,
+            deliveryLocation: deliveryLocation,
         };
 
         console.log("Sending to sheets:", sheetData);
