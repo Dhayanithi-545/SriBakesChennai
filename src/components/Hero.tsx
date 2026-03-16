@@ -5,13 +5,13 @@ import { useEffect, useRef, useState } from "react";
 import { Sparkles, Palette, Home } from "lucide-react";
 
 const categories = [
-    { id: "baby-kids", name: "Baby & Kids Cakes", image: "/baby-kids/IMG-20250705-WA0072.jpg" },
-    { id: "love-couple", name: "Love & Couple Cakes", image: "/love-couple/IMG_20251108_145245.jpg" },
-    { id: "mini-cute", name: "Mini & Cute Cakes", image: "/mini-cute/IMG_20250813_152104.jpg" },
-    { id: "brownies", name: "Signature Brownies", image: "/brownies/IMG-20250705-WA0068.jpg" },
-    { id: "standard", name: "Standard Cakes", image: "/standard/IMG-20231012-WA0002.jpg" },
-    { id: "tier", name: "Tier Cakes", image: "/tier/IMG-20250427-WA0015.jpg" },
-    { id: "wedding", name: "Wedding Cakes", image: "/wedding/IMG-20260209-WA0017.jpg" },
+    { id: "baby-kids", name: "Baby & Kids Cakes", image: "/baby-kids/IMG_20260125_152031.jpg" },
+    { id: "love-couple", name: "Love & Couple Cakes", image: "/love-couple/IMG_20250405_184257.jpg" },
+    { id: "mini-cute", name: "Mini & Cute Cakes", image: "/mini-cute/IMG_20251120_095944.jpg" },
+    { id: "brownies", name: "Signature Brownies", image: "/brownies/IMG_20250411_181144.jpg" },
+    { id: "standard", name: "Standard Cakes", image: "/standard/IMG_20260131_170310_1.jpg" },
+    { id: "tier", name: "Tier Cakes", image: "/Hero-Images/IMG_20260220_110358.jpg" },
+    { id: "wedding", name: "Wedding Cakes", image: "/wedding/IMG-20260214-WA0015.jpg" },
 ];
 
 const heroImages = [
@@ -42,7 +42,7 @@ export default function Hero() {
     const lastTimeRef = useRef<number | null>(null);
 
     // Speed: pixels per second (mirrors CSS 35s for ~2240 px half-width estimate)
-    const SPEED = 64; // px/s  — tweak freely
+    const SPEED = 60; // px/s  — tweak freely
 
     // ── Auto-scroll via rAF (replaces CSS animation while touch active) ──
     const startRaf = () => {
