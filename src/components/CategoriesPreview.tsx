@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const categories = [
     { id: "baby-kids", name: "Baby & Kids Cakes", image: "/baby-kids/IMG_20260125_152031.jpg" },
-    { id: "love-couple", name: "Love & Couple Cakes", image: "/love-couple/IMG_20250405_184257.jpg" },
+    { id: "love-couple", name: "Love & Couple Cakes", image: "/love-couple/IMG-20260301-WA0033(1).jpg" },
     { id: "mini-cute", name: "Mini & Cute Cakes", image: "/mini-cute/IMG_20251120_095944.jpg" },
-    { id: "brownies", name: "Signature Brownies", image: "/brownies/IMG_20250411_181144.jpg" },
+    { id: "brownies", name: "Signature Brownies", image: "/brownies/IMG-20250815-WA0041.jpg" },
     { id: "standard", name: "Standard Cakes", image: "/standard/IMG_20260131_170310_1.jpg" },
     { id: "tier", name: "Tier Cakes", image: "/Hero-Images/IMG_20260220_110358.jpg" },
     { id: "wedding", name: "Wedding Cakes", image: "/wedding/IMG-20260214-WA0015.jpg" },

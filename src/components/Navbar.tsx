@@ -41,7 +41,7 @@ export default function Navbar() {
                                 <img src="/logo.jpeg" alt="Sri Bakes Logo" className="h-full w-full object-cover" />
                             </div>
                             <span
-                                className="text-3xl md:text-4xl font-black tracking-tight text-[#c65f47]"
+                                className="text-4xl md:text-4xl font-black tracking-tight text-[#c65f47]"
                                 style={{ fontFamily: "var(--font-logo)" }}
                             >
                                 Sri Bakes
