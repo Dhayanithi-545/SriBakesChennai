@@ -6,9 +6,9 @@ import { Sparkles, Palette, Home } from "lucide-react";
 
 const categories = [
     { id: "baby-kids", name: "Baby & Kids Cakes", image: "/baby-kids/IMG_20260125_152031.jpg" },
-    { id: "love-couple", name: "Love & Couple Cakes", image: "/love-couple/IMG_20250405_184257.jpg" },
+    { id: "love-couple", name: "Love & Couple Cakes", image: "/love-couple/IMG-20260301-WA0033(1).jpg" },
     { id: "mini-cute", name: "Mini & Cute Cakes", image: "/mini-cute/IMG_20251120_095944.jpg" },
-    { id: "brownies", name: "Signature Brownies", image: "/brownies/IMG_20250411_181144.jpg" },
+    { id: "brownies", name: "Signature Brownies", image: "/brownies/IMG-20250815-WA0041.jpg" },
     { id: "standard", name: "Standard Cakes", image: "/standard/IMG_20260131_170310_1.jpg" },
     { id: "tier", name: "Tier Cakes", image: "/Hero-Images/IMG_20260220_110358.jpg" },
     { id: "wedding", name: "Wedding Cakes", image: "/wedding/IMG-20260214-WA0015.jpg" },
@@ -146,14 +146,16 @@ export default function Hero() {
                 {/* Hero Content */}
                 <div className="relative z-20 text-center px-5 max-w-4xl mx-auto flex flex-col items-center mt-10">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-5 drop-shadow-xl tracking-tight leading-tight">
-                        Handcrafted Cakes For Your{" "}
+                        Handcrafted Cakes to 
+{" "}
                         <br className="hidden sm:block" />
-                        Unforgettable Moments
+                        Sweeten Your Special Moments
                     </h1>
 
                     <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 drop-shadow-md font-medium max-w-2xl leading-relaxed">
-                        From elegant wedding tiers to playful kids' designs, we bake fresh,
-                        premium custom cakes tailored exactly to your vision.
+                        At SRI BAKE'S, every cake is freshly baked and thoughtfully designed to make your celebrations memorable.
+We create beautiful customised cakes with premium ingredients and lots of love.
+Perfectly crafted to make every moment sweeter and more special.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-3 justify-center mt-2 w-full sm:w-auto">
