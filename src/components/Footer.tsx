@@ -49,10 +49,10 @@ export default function Footer() {
                     <div>
                         <h4 className="text-lg font-semibold mb-6 text-white border-b border-white/10 pb-2 inline-block">Policy</h4>
                         <ul className="space-y-3 text-sm text-gray-300">
-                            <li><Link href="/" className="hover:text-white transition-colors">Shipping Policy</Link></li>
-                            <li><Link href="/" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
-                            <li><Link href="/" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="/" className="hover:text-white transition-colors">Cancellation & Return Policy</Link></li>
+                            <li><Link href="/shipping-policy" className="hover:text-white transition-colors">Shipping Policy</Link></li>
+                            <li><Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
+                            <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/cancellation-refund-policy" className="hover:text-white transition-colors">Cancellation & Refund Policy</Link></li>
                         </ul>
                     </div>
 
@@ -61,27 +61,39 @@ export default function Footer() {
                         <h4 className="text-lg font-semibold mb-6 text-white border-b border-white/10 pb-2 inline-block">Connect With Us</h4>
                         <ul className="space-y-4 text-sm text-gray-300">
                             <li>
-                                <a href="https://www.instagram.com/sri_bakes_at_chennai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
+                                <a href="https://www.instagram.com/sri_bakes_at_chennai/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
                                     <Instagram className="h-5 w-5" /> Instagram
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
+                                <a href="https://www.facebook.com/share/1TKzWSeH74/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
                                     <Facebook className="h-5 w-5" /> Facebook
                                 </a>
                             </li>
                             <li>
-                                <a href="https://wa.me/917305329826" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
+                                <a href="https://wa.me/919884420725" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
                                     <MessageCircle className="h-5 w-5" /> Whatsapp
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
+                                <a href="https://youtube.com/@sribakes?si=mdBQlyb7Tl12K76Z" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
                                     <Youtube className="h-5 w-5" /> Youtube
                                 </a>
                             </li>
                         </ul>
                     </div>
+                </div>
+
+                <div className="md:hidden mb-8 rounded-xl border border-white/10 bg-white/5 p-4 text-sm">
+                    <p className="text-gray-200 font-medium mb-3">Quick Order Support</p>
+                    <a
+                        href="https://wa.me/919884420725"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-full rounded-lg bg-[#e76f51] px-4 py-2.5 font-semibold text-white hover:bg-[#d05f42] transition-colors"
+                    >
+                        WhatsApp: 98844 20725
+                    </a>
                 </div>
 
 

@@ -124,7 +124,7 @@ export default function Hero() {
         <section className="relative w-full overflow-hidden bg-[#2c2420]">
             {/* ── Hero Background Slideshow ── */}
             {/* Mobile-first: tall on phones (85dvh), shorter on desktop (55vh) */}
-            <div className="relative h-[85dvh] md:h-[60vh] min-h-[480px] md:min-h-[420px] w-full flex items-center justify-center">
+            <div className="relative h-[60dvh] md:h-[60vh] min-h-[480px] md:min-h-[420px] w-full flex items-center justify-center">
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50 z-10" />
 
@@ -152,13 +152,31 @@ export default function Hero() {
                         Sweeten Your Special Moments
                     </h1>
 
-                    <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 drop-shadow-md font-medium max-w-2xl leading-relaxed">
+                    {/* <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 drop-shadow-md font-medium max-w-2xl leading-relaxed">
                         At SRI BAKE'S, every cake is freshly baked and thoughtfully designed to make your celebrations memorable.
 We create beautiful customised cakes with premium ingredients and lots of love.
 Perfectly crafted to make every moment sweeter and more special.
-                    </p>
+                    </p> */}
 
-                    <div className="flex flex-col sm:flex-row gap-3 justify-center mt-2 w-full sm:w-auto">
+                    {/* ── Trust bar ── */}
+                    <div className="mt-5 flex flex-col sm:flex-row items-start sm:items-center justify-center gap-5  sm:gap-0">
+                        {[
+                            { icon: <Sparkles className="w-4 h-4 text-white" />, title: "100% Fresh", desc: "Baked from scratch on every order" },
+                            { icon: <Palette className="w-4 h-4 text-white" />, title: "Custom Designs", desc: "Made to match your event's vibe" },
+                            { icon: <Home className="w-4 h-4 text-white" />, title: "Home Baked", desc: "Crafted with hygiene, care & love" },
+                        ].map((item, i) => (
+                            <div key={item.title} className="flex items-center gap-2.5 sm:px-6 first:sm:pl-0 last:sm:pr-0">
+                                {i > 0 && <span className="hidden sm:block w-px h-8 bg-white/15 mr-6 flex-shrink-0" />}
+                                {item.icon}
+                                <div>
+                                    <p className="text-white text-sm font-semibold leading-tight">{item.title}</p>
+                                    <p className="text-white/50 text-xs leading-snug">{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center mt-2 w-full sm:w-auto">
                         {/* Primary CTA — flat solid */}
                         <Link
                             href="/contact"
@@ -187,32 +205,16 @@ Perfectly crafted to make every moment sweeter and more special.
                         </a>
                     </div>
 
-                    {/* ── Trust bar ── */}
-                    <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-center gap-5 sm:gap-0">
-                        {[
-                            { icon: <Sparkles className="w-4 h-4 text-white" />, title: "100% Fresh", desc: "Baked from scratch on every order" },
-                            { icon: <Palette className="w-4 h-4 text-white" />, title: "Custom Designs", desc: "Made to match your event's vibe" },
-                            { icon: <Home className="w-4 h-4 text-white" />, title: "Home Baked", desc: "Crafted with hygiene, care & love" },
-                        ].map((item, i) => (
-                            <div key={item.title} className="flex items-center gap-2.5 sm:px-6 first:sm:pl-0 last:sm:pr-0">
-                                {i > 0 && <span className="hidden sm:block w-px h-8 bg-white/15 mr-6 flex-shrink-0" />}
-                                {item.icon}
-                                <div>
-                                    <p className="text-white text-sm font-semibold leading-tight">{item.title}</p>
-                                    <p className="text-white/50 text-xs leading-snug">{item.desc}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    
                 </div>
             </div>
 
             {/* ── Category Marquee ── */}
             <div className="bg-white border-t border-b border-gray-100 py-6 relative z-30 select-none">
                 {/* Touch-drag hint label — mobile only */}
-                <p className="text-center text-xs text-gray-400 mb-3 sm:hidden tracking-wide uppercase">
+                {/* <p className="text-center text-xs text-gray-400 mb-3 sm:hidden tracking-wide uppercase">
                     ← Drag to explore →
-                </p>
+                </p> */}
 
                 {/* Overflow wrapper with edge fade */}
                 <div
