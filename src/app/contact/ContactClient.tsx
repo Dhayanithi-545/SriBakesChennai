@@ -52,10 +52,19 @@ const contactItems = [
 
 export default function ContactClient() {
     return (
-        <div className="min-h-screen bg-[#fffaf5]">
+        <div
+            className="min-h-screen relative"
+            style={{ backgroundImage: "url('/cake-bg/story-bg4.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed" }}
+        >
+            <div className="absolute inset-0 bg-[#fffaf5]/88" />
 
             {/* ── Hero Banner ── */}
-            <div className="bg-[#2c2420] text-white pt-16 pb-12 px-4 text-center">
+            <div
+                className="text-white pt-16 pb-12 px-4 text-center relative"
+                style={{ backgroundImage: "url('/cake-bg/header-bg2.jpg')", backgroundSize: "cover", backgroundPosition: "top left" }}
+            >
+                <div className="absolute inset-0 bg-[#2c2420]/80" />
+                <div className="relative z-10">
                 <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
                     Sri Bakes · Chennai
                 </p>
@@ -79,9 +88,10 @@ export default function ContactClient() {
                     </svg>
                     Chat on WhatsApp
                 </a> */}
+                </div>
             </div>
 
-            <div className="max-w-2xl mx-auto px-3 py-12 space-y-14">
+            <div className="relative z-10 max-w-2xl mx-auto px-3 py-12 space-y-14">
 
                 {/* ── Section 2: Enquiry Form ── */}
                 <div>

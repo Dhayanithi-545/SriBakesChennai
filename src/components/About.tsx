@@ -4,8 +4,31 @@ import { Cake, Sparkles, Heart, Award, Clock, Users } from "lucide-react";
 
 export default function About() {
     return (
-        <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white to-[#fef9f6] border-b border-gray-100">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section
+            className="py-16 sm:py-20 md:py-24 border-b border-gray-100 relative overflow-hidden"
+            style={{ backgroundImage: "url('/cake-bg/story-bg4.jpg')", backgroundSize: "cover", backgroundPosition: "top right" }}
+        >
+            {/* Overlay — lighter so background & illustrations show through */}
+            <div className="absolute inset-0 bg-white/55" style={{ zIndex: 0 }} />
+
+            {/* Decorative cake illustrations */}
+            <img
+                src="/cake-bg/story.png" alt="" aria-hidden
+                className="absolute -bottom-6 -right-6 w-52 sm:w-72 md:w-80 opacity-35 pointer-events-none select-none drop-shadow-xl"
+                style={{ zIndex: 1 }}
+            />
+            <img
+                src="/cake-bg/steps1.png" alt="" aria-hidden
+                className="absolute -top-4 -left-6 w-44 sm:w-56 opacity-25 pointer-events-none select-none drop-shadow-lg"
+                style={{ zIndex: 1 }}
+            />
+            <img
+                src="/cake-bg/footer1.png" alt="" aria-hidden
+                className="absolute top-1/2 -translate-y-1/2 -right-8 w-48 sm:w-64 opacity-15 pointer-events-none select-none hidden md:block"
+                style={{ zIndex: 1 }}
+            />
+
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* 🔥 HEADER */}
                 <div className="text-center mb-12 sm:mb-16">

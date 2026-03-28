@@ -9,8 +9,12 @@ const factors = [
 
 export default function PricingInfo() {
     return (
-        <section className="py-20 bg-[#f5f0eb] border-b border-[#e5ddd5]">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section
+            className="py-20 border-b border-[#e5ddd5] relative"
+            style={{ backgroundImage: "url('/cake-bg/story-bg2.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+        >
+            <div className="absolute inset-0 bg-[#f5f0eb]/88" />
+            <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header row */}
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12 pb-6 border-b-2 border-[#2c2420]">

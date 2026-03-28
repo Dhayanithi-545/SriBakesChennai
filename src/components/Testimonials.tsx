@@ -210,7 +210,12 @@ export default function Testimonials() {
     };
 
     return (
-        <section className="py-16 bg-[#fffaf5] overflow-hidden">
+        <section
+            className="py-16 overflow-hidden relative"
+            style={{ backgroundImage: "url('/cake-bg/story-bg3.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+        >
+            <div className="absolute inset-0 bg-[#fffaf5]/87" />
+            <div className="relative z-10">
             {/* Header */}
             <div className="max-w-2xl mx-auto px-4 text-center mb-10">
                 <p className="text-primary text-xs font-bold tracking-widest uppercase mb-2">
@@ -283,6 +288,7 @@ export default function Testimonials() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                     </svg>
                 </a>
+            </div>
             </div>
         </section>
     );
