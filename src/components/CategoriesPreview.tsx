@@ -14,8 +14,12 @@ const categories = [
 
 export default function CategoriesPreview() {
     return (
-        <section className="py-24 bg-white border-b border-gray-100">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section
+            className="py-24 border-b border-gray-100 relative"
+            style={{ backgroundImage: "url('/cake-bg/menu-bg.jpg')", backgroundSize: "cover", backgroundPosition: "bottom left" }}
+        >
+            <div className="absolute inset-0 bg-white/80" />
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#2c2420] mb-4 tracking-tight">Our Creations</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-gray-600">

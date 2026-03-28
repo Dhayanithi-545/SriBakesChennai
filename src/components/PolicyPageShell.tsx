@@ -9,8 +9,12 @@ type PolicyPageShellProps = {
 
 export default function PolicyPageShell({ title, children }: PolicyPageShellProps) {
   return (
-    <section className="bg-[#fffaf5] py-6 sm:py-10">
-      <div className="mx-auto w-full max-w-3xl px-4 sm:px-6">
+    <section
+      className="py-6 sm:py-10 relative"
+      style={{ backgroundImage: "url('/cake-bg/header-bg.jpg')", backgroundSize: "cover", backgroundPosition: "top left" }}
+    >
+      <div className="absolute inset-0 bg-[#fffaf5]/88" />
+      <div className="relative z-10 mx-auto w-full max-w-3xl px-4 sm:px-6">
         <Link
           href="/"
           className="mb-4 inline-flex items-center gap-2 text-sm font-medium text-[#c65f47] hover:text-[#a64e39] transition-colors"

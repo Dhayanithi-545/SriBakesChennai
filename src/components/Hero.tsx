@@ -121,7 +121,10 @@ export default function Hero() {
     };
 
     return (
-        <section className="relative w-full overflow-hidden bg-[#2c2420]">
+        <section
+            className="relative w-full overflow-hidden"
+            style={{ backgroundImage: "url('/cake-bg/header-bg2.jpg')", backgroundSize: "cover", backgroundPosition: "top left" }}
+        >
             {/* ── Hero Background Slideshow ── */}
             {/* Mobile-first: tall on phones (85dvh), shorter on desktop (55vh) */}
             <div className="relative h-[54dvh] md:h-[60vh] min-h-[480px] md:min-h-[420px] w-full flex items-center justify-center">
@@ -210,7 +213,11 @@ Perfectly crafted to make every moment sweeter and more special.
             </div>
 
             {/* ── Category Marquee ── */}
-            <div className="bg-white border-t border-b border-gray-100 py-6 relative z-30 select-none">
+            <div
+                className="border-t border-b border-gray-100 py-6 relative z-30 select-none"
+                style={{ backgroundImage: "url('/cake-bg/steps-bg2.png')", backgroundSize: "cover", backgroundPosition: "bottom right" }}
+            >
+                <div className="absolute inset-0 bg-white/88" />
                 {/* Touch-drag hint label — mobile only */}
                 {/* <p className="text-center text-xs text-gray-400 mb-3 sm:hidden tracking-wide uppercase">
                     ← Drag to explore →
