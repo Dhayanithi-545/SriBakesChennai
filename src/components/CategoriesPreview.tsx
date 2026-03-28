@@ -18,7 +18,7 @@ export default function CategoriesPreview() {
             className="py-24 border-b border-gray-100 relative"
             style={{ backgroundImage: "url('/cake-bg/menu-bg.jpg')", backgroundSize: "cover", backgroundPosition: "bottom left" }}
         >
-            <div className="absolute inset-0 bg-white/80" />
+            <div className="absolute inset-0 bg-[#fdf6ed]/80" />
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#2c2420] mb-4 tracking-tight">Our Creations</h2>
@@ -31,7 +31,7 @@ export default function CategoriesPreview() {
                     {categories.map((category) => (
                         <div
                             key={category.id}
-                            className="group overflow-hidden bg-white border border-gray-100 rounded-sm shadow-sm hover:shadow-md transition-shadow"
+                            className="group overflow-hidden bg-[#fdf6ed] border border-[#e8d5bc] rounded-sm shadow-sm hover:shadow-md transition-shadow"
                         >
                             <Link href={`/gallery#${category.id}`}>
                                 <div className="relative w-full aspect-square overflow-hidden bg-gray-50">
@@ -62,7 +62,7 @@ export default function CategoriesPreview() {
                 <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <Link
                         href="/gallery"
-                        className="inline-flex bg-white text-gray-900 border border-gray-200 px-8 py-3 rounded-sm font-semibold hover:bg-gray-50 hover:border-gray-300 transition-colors shadow-sm"
+                        className="inline-flex bg-[#fdf6ed] text-[#2c1a0e] border border-[#e8d5bc] px-8 py-3 rounded-sm font-semibold hover:bg-[#f5ead8] hover:border-[#d9b99a] transition-colors shadow-sm"
                     >
                         View Full Gallery
                     </Link>

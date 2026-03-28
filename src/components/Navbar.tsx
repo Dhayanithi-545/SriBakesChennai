@@ -110,7 +110,7 @@ export default function Navbar() {
                                 style={{ color: "#4a3425" }}
                             >
                                 <span className="w-5 h-[1.5px] block" style={{ background: "#4a3425" }} />
-                                <span className="w-3.5 h-[1.5px] block self-end" style={{ background: "#4a3425" }} />
+                                <span className="w-5 h-[1.5px] block" style={{ background: "#4a3425" }} />
                                 <span className="w-5 h-[1.5px] block" style={{ background: "#4a3425" }} />
                             </button>
                         </div>

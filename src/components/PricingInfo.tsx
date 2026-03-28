@@ -34,7 +34,7 @@ export default function PricingInfo() {
                     {factors.map((f) => (
                         <div
                             key={f.num}
-                            className="bg-white border border-[#e5ddd5] border-l-4 border-l-[#e76f51] p-6 rounded-sm"
+                            className="bg-[#fdf6ed] border border-[#e5ddd5] border-l-4 border-l-[#e76f51] p-6 rounded-sm"
                         >
                             <span className="block text-3xl font-black text-[#e76f51]/20 mb-3 leading-none">{f.num}</span>
                             <h3 className="text-base font-bold text-[#2c2420] mb-2">{f.title}</h3>

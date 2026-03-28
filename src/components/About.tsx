@@ -9,7 +9,7 @@ export default function About() {
             style={{ backgroundImage: "url('/cake-bg/story-bg4.jpg')", backgroundSize: "cover", backgroundPosition: "top right" }}
         >
             {/* Overlay — lighter so background & illustrations show through */}
-            <div className="absolute inset-0 bg-white/55" style={{ zIndex: 0 }} />
+            <div className="absolute inset-0 bg-[#fdf6ed]/55" style={{ zIndex: 0 }} />
 
             {/* Decorative cake illustrations */}
             <img
