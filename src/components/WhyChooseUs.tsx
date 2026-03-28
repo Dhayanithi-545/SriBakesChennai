@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
             className="py-24 border-b border-gray-100 relative"
             style={{ backgroundImage: "url('/cake-bg/steps-bg2.png')", backgroundSize: "cover", backgroundPosition: "bottom right" }}
         >
-            <div className="absolute inset-0 bg-white/82" />
+            <div className="absolute inset-0 bg-[#fdf6ed]/82" />
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#2c2420] tracking-tight mb-3">Why Choose Sri Bakes?</h2>
@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
                     {reasons.map((reason, index) => (
                         <div
                             key={index}
-                            className="flex flex-col items-center text-center p-8 border border-gray-100 rounded-sm shadow-sm hover:shadow-md transition-shadow bg-white"
+                            className="flex flex-col items-center text-center p-8 border border-[#e8d5bc] rounded-sm shadow-sm hover:shadow-md transition-shadow bg-[#fdf6ed]"
                         >
                             <div className="mb-6 p-4 bg-gray-50 rounded-full border border-gray-100">
                                 {reason.icon}

@@ -141,7 +141,7 @@ export default function EnquiryForm() {
     };
 
     const inputCls =
-        "w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none text-gray-900 bg-white transition-all text-sm";
+        "w-full px-4 py-3 border border-[#e8d5bc] rounded-xl focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none text-gray-900 bg-[#fdf6ed] transition-all text-sm";
     const labelCls =
         "block text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wide";
 
@@ -154,7 +154,7 @@ export default function EnquiryForm() {
                 </p>
             </div>
 
-            <div className="bg-white border border-gray-100 p-6 md:p-8 shadow-sm rounded-2xl">
+            <div className="bg-[#fdf6ed] border border-[#e8d5bc] p-6 md:p-8 shadow-sm rounded-2xl">
                 <form onSubmit={handleSubmit} className="space-y-5">
 
                     {/* Name + Phone */}

@@ -127,7 +127,7 @@ export default function Hero() {
         >
             {/* ── Hero Background Slideshow ── */}
             {/* Mobile-first: tall on phones (85dvh), shorter on desktop (55vh) */}
-            <div className="relative h-[54dvh] md:h-[60vh] min-h-[480px] md:min-h-[420px] w-full flex items-center justify-center">
+            <div className="relative h-[68dvh] md:h-[60vh] min-h-[520px] md:min-h-[420px] w-full flex items-center justify-center">
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50 z-10" />
 
@@ -181,45 +181,36 @@ Perfectly crafted to make every moment sweeter and more special.
                         ))}
                     </div>
 
-                    <div className="mt-7 flex flex-col sm:flex-row gap-2.5 justify-center w-full sm:w-auto">
+                    <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
 
                         {/* Primary — Book Custom Order */}
                         <Link
                             href="/contact"
-                            className="group inline-flex items-center gap-3 px-5 py-3 text-white text-[11px] font-bold uppercase tracking-[0.18em] transition-colors duration-150"
+                            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 font-semibold text-sm text-white transition-colors duration-150"
                             style={{ background: "#c65f47" }}
                             onMouseEnter={e => (e.currentTarget.style.background = "#a84f3b")}
                             onMouseLeave={e => (e.currentTarget.style.background = "#c65f47")}
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 opacity-90 flex-shrink-0">
-                                <path strokeLinecap="square" strokeLinejoin="miter" d="M12 2c0 0 1-1 2-1s2 1 2 1" />
-                                <rect x="3" y="8" width="18" height="4" />
-                                <rect x="3" y="12" width="18" height="8" />
-                                <line x1="3" y1="16" x2="21" y2="16" />
-                            </svg>
                             Book Custom Order
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 opacity-70 flex-shrink-0 transition-transform duration-150 group-hover:translate-x-0.5">
-                                <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
-                            </svg>
                         </Link>
 
-                        {/* Secondary — WhatsApp */}
+                        {/* WhatsApp — split vertical border button */}
                         <a
                             href="https://wa.me/919884420725"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group inline-flex items-center gap-3 px-5 py-3 text-white text-[11px] font-bold uppercase tracking-[0.18em] transition-colors duration-150"
-                            style={{ background: "transparent", border: "1.5px solid rgba(255,255,255,0.35)" }}
-                            onMouseEnter={e => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.7)")}
-                            onMouseLeave={e => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)")}
+                            className="w-full sm:w-auto inline-flex items-stretch overflow-hidden border border-white font-semibold text-sm transition-colors duration-150"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 flex-shrink-0" style={{ color: "#4ade80" }}>
-                                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z" />
-                            </svg>
-                            Chat on WhatsApp
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 opacity-50 flex-shrink-0 transition-transform duration-150 group-hover:translate-x-0.5">
-                                <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
-                            </svg>
+                            {/* Green icon panel */}
+                            <span className="bg-[#25D366] hover:bg-[#1ebe5d] flex items-center justify-center px-4 flex-shrink-0 transition-colors duration-150">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-6 h-6">
+                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z" />
+                                </svg>
+                            </span>
+                            {/* Text panel */}
+                            <span className="flex-1 flex items-center justify-center bg-white text-[#2c2420] hover:bg-[#f5ead8] px-5 py-3.5 transition-colors duration-150">
+                                Chat on WhatsApp
+                            </span>
                         </a>
 
                     </div>
@@ -233,7 +224,7 @@ Perfectly crafted to make every moment sweeter and more special.
                 className="border-t border-b border-gray-100 py-6 relative z-30 select-none"
                 style={{ backgroundImage: "url('/cake-bg/steps-bg2.png')", backgroundSize: "cover", backgroundPosition: "bottom right" }}
             >
-                <div className="absolute inset-0 bg-white/88" />
+                <div className="absolute inset-0 bg-[#fdf6ed]/88" />
                 {/* Touch-drag hint label — mobile only */}
                 {/* <p className="text-center text-xs text-gray-400 mb-3 sm:hidden tracking-wide uppercase">
                     ← Drag to explore →

@@ -122,7 +122,7 @@ function ReviewCard({ review, colorClass }: { review: typeof reviews[0]; colorCl
     const displayText = isLong && !expanded ? review.text.slice(0, 160) + "…" : review.text;
 
     return (
-        <div className="flex-shrink-0 w-72 sm:w-80 bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex flex-col gap-3 snap-start">
+        <div className="flex-shrink-0 w-72 sm:w-80 bg-[#fdf6ed] rounded-2xl border border-[#e8d5bc] shadow-sm p-5 flex flex-col gap-3 snap-start">
             {/* Header */}
             <div className="flex items-center gap-3">
                 <div className={`w-10 h-10 rounded-full ${colorClass} flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>
