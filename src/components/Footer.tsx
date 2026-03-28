@@ -11,7 +11,7 @@ export default function Footer() {
                     <div>
                         <div className="flex items-center gap-3 mb-6">
                             <div className="h-12 w-12 rounded-full overflow-hidden border border-white/20">
-                                <img src="/logo.jpeg" alt="Sri Bakes Logo" className="h-full w-full object-cover" />
+                                <img src="/logo.png" alt="Sri Bakes Logo" className="h-full w-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="text-2xl tracking-tight text-[#e76f51]" style={{ fontFamily: 'var(--font-logo)' }}>Sri Bakes</h3>

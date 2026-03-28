@@ -141,6 +141,27 @@ export default function About() {
 
                 </div>
 
+                {/* Drive Portfolio Link */}
+                <div className="mt-10 text-center">
+                    <a
+                        href="https://drive.google.com/drive/folders/1v_N2JnYkEG-HmaiENW0fMTKhsHm79M7n"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-md font-semibold text-sm text-white bg-[#e76f51] hover:bg-[#d05f42] active:bg-[#c0543a] transition-colors duration-150 shadow-md"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
+                            <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3L27.5 53H0c0 1.55.4 3.1 1.2 4.5z" fill="#fff"/>
+                            <path d="M43.65 25L29.9 1.2C28.55 2 27.4 3.1 26.6 4.5L1.2 48.5C.4 49.9 0 51.45 0 53h27.5z" fill="#fff"/>
+                            <path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75L86.1 57.5c.8-1.4 1.2-2.95 1.2-4.5H59.8L73.55 76.8z" fill="#fff"/>
+                            <path d="M43.65 25L57.4 1.2C56.05.4 54.5 0 52.9 0H34.4c-1.6 0-3.15.45-4.5 1.2z" fill="#fff"/>
+                            <path d="M59.8 53H27.5L13.75 76.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#fff"/>
+                            <path d="M73.4 26.5L60.7 4.5C59.9 3.1 58.75 2 57.4 1.2L43.65 25 59.8 53h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#fff"/>
+                        </svg>
+                        See More of Creations
+                    </a>
+                    <p className="mt-2 text-xs text-gray-500">Browse our complete portfolio of creations</p>
+                </div>
+
             </div>
         </section>
     );
