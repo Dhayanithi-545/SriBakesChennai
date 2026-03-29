@@ -185,7 +185,7 @@ export default function ContactClient() {
                         href="https://wa.me/919884420725"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm bg-primary text-white px-5 py-2.5 rounded-full font-bold hover:bg-primary/90 transition flex-shrink-0"
+                        className="bg-primary text-white px-5 py-2.5 font-bold uppercase tracking-[0.14em] text-[12px] hover:bg-primary/90 transition flex-shrink-0"
                     >
                         Order Now
                     </a>

@@ -186,7 +186,7 @@ Perfectly crafted to make every moment sweeter and more special.
                         {/* Primary — Book Custom Order */}
                         <Link
                             href="/contact"
-                            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 font-semibold text-sm text-white transition-colors duration-150"
+                            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 font-bold uppercase tracking-[0.14em] text-[12px] text-white transition-colors duration-150"
                             style={{ background: "#c65f47" }}
                             onMouseEnter={e => (e.currentTarget.style.background = "#a84f3b")}
                             onMouseLeave={e => (e.currentTarget.style.background = "#c65f47")}
@@ -199,7 +199,7 @@ Perfectly crafted to make every moment sweeter and more special.
                             href="https://wa.me/919884420725"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full sm:w-auto inline-flex items-stretch overflow-hidden border border-white font-semibold text-sm transition-colors duration-150"
+                            className="w-full sm:w-auto inline-flex items-stretch overflow-hidden border border-white font-bold uppercase tracking-[0.14em] text-[12px] transition-colors duration-150"
                         >
                             {/* Green icon panel */}
                             <span className="bg-[#25D366] hover:bg-[#1ebe5d] flex items-center justify-center px-4 flex-shrink-0 transition-colors duration-150">

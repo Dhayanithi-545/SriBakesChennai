@@ -346,7 +346,7 @@ export default function EnquiryForm() {
                     <div className="pt-2">
                         <button
                             type="submit"
-                            className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#25D366] text-white rounded-xl font-bold tracking-wide hover:bg-[#20bd5a] active:scale-95 transition-all text-base shadow-md"
+                            className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#25D366] text-white font-bold uppercase tracking-[0.14em] text-[12px] hover:bg-[#20bd5a] active:scale-95 transition-all"
                         >
                             Send via WhatsApp
                             <Send className="w-4 h-4" />

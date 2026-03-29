@@ -104,7 +104,7 @@ export default function GalleryPage() {
                         href="https://drive.google.com/drive/folders/1v_N2JnYkEG-HmaiENW0fMTKhsHm79M7n"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-md font-semibold text-sm text-white bg-[#e76f51] hover:bg-[#d05f42] transition-colors duration-150 shadow-md"
+                        className="inline-flex items-center gap-2.5 px-7 py-3.5 font-bold uppercase tracking-[0.14em] text-[12px] text-white bg-[#e76f51] hover:bg-[#d05f42] transition-colors duration-150"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
                             <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3L27.5 53H0c0 1.55.4 3.1 1.2 4.5z" fill="#fff"/>
