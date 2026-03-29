@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
                         href="https://wa.me/919884420725"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-3.5 rounded-sm font-semibold hover:bg-[#20bd5a] transition-colors shadow-sm"
+                        className="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-3.5 font-bold uppercase tracking-[0.14em] text-[12px] hover:bg-[#20bd5a] transition-colors"
                     >
                         <Smartphone className="w-5 h-5" />
                         Order via WhatsApp

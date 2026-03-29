@@ -40,7 +40,7 @@ export default function Footer() {
                         <p className="text-sm text-gray-400 mb-6">
                             Customer Support Team hours are Monday-Saturday, 10 AM - 7 PM IST
                         </p>
-                        <Link href="/contact" className="inline-block bg-white text-black px-6 py-2 text-sm font-semibold hover:bg-gray-200 transition-colors">
+                        <Link href="/contact" className="inline-block bg-[#fdf6ed] text-[#2c1a0e] px-6 py-2.5 font-bold uppercase tracking-[0.14em] text-[12px] hover:bg-[#f5ead8] transition-colors">
                             CONTACT US
                         </Link>
                     </div>
@@ -90,7 +90,7 @@ export default function Footer() {
                         href="https://wa.me/919884420725"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-full rounded-lg bg-[#e76f51] px-4 py-2.5 font-semibold text-white hover:bg-[#d05f42] transition-colors"
+                        className="inline-flex items-center justify-center w-full bg-[#e76f51] px-4 py-2.5 font-bold uppercase tracking-[0.14em] text-[12px] text-white hover:bg-[#d05f42] transition-colors"
                     >
                         WhatsApp: 98844 20725
                     </a>

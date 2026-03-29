@@ -62,7 +62,7 @@ export default function CategoriesPreview() {
                 <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <Link
                         href="/gallery"
-                        className="inline-flex bg-[#fdf6ed] text-[#2c1a0e] border border-[#e8d5bc] px-8 py-3 rounded-sm font-semibold hover:bg-[#f5ead8] hover:border-[#d9b99a] transition-colors shadow-sm"
+                        className="inline-flex bg-[#fdf6ed] text-[#2c1a0e] border border-[#e8d5bc] px-8 py-3 font-bold uppercase tracking-[0.14em] text-[12px] hover:bg-[#f5ead8] hover:border-[#d9b99a] transition-colors"
                     >
                         View Full Gallery
                     </Link>
@@ -70,7 +70,7 @@ export default function CategoriesPreview() {
                         href="https://drive.google.com/drive/folders/1v_N2JnYkEG-HmaiENW0fMTKhsHm79M7n"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-[#e76f51] text-white border border-[#e76f51] px-8 py-3 rounded-sm font-semibold hover:bg-[#d05f42] hover:border-[#d05f42] transition-colors shadow-sm"
+                        className="inline-flex items-center gap-2 bg-[#e76f51] text-white px-8 py-3 font-bold uppercase tracking-[0.14em] text-[12px] hover:bg-[#d05f42] transition-colors"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
                             <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3L27.5 53H0c0 1.55.4 3.1 1.2 4.5z" fill="#fff"/>
